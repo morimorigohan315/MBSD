@@ -1,0 +1,21 @@
+body {
+    width: 100%;
+    height: 700px;
+}
+
+iframe {
+    width: 100%; 
+    height: 100%;   
+    position: relative;
+    z-index: 0;
+}
+
+button {
+    opacity: 0.0;
+    position: absolute;
+    top: 325px;
+    left: 590px;
+    z-index: 1;
+    width: 80px;
+    height: 45px;
+}
